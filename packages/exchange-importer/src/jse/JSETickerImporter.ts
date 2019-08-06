@@ -21,17 +21,12 @@ export class JSETickerImporter {
 
       const rawJsonData = await csv().fromString(response.data)
 
-      const tickers = this.toTicker(rawJsonData)
+      const tickers = rawJsonData.map(this.decodeTicker)
       return tickers
     } catch (error) {
       console.log(error)
       throw error
     }
-  }
-
-  private toTicker(rawTickers: any[]): Ticker[] {
-    const tickers = rawTickers.map(this.decodeTicker)
-    return tickers
   }
 
   private decodeTicker(tickerJson: any): Ticker {
