@@ -1,7 +1,7 @@
 import { ImportFilter } from '../common/ImportFilter'
 import { JSETickerImporter } from './JSETickerImporter'
 
-export default class JSEImporter {
+export class JSEImporter {
   private readonly tickerImporter: JSETickerImporter
 
   constructor() {
