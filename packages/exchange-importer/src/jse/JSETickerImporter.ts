@@ -38,8 +38,8 @@ export class JSETickerImporter {
     return {
       symbol: tickerJson.Symbol,
       date: tickerJson.Date,
-      closingPrice: tickerJson['Close Price'],
-      volume: tickerJson['Volume (non block)'],
+      closingPrice: +Number(tickerJson['Close Price']).toFixed(2),
+      volume: Math.round(tickerJson['Volume (non block)']),
     }
   }
 }
