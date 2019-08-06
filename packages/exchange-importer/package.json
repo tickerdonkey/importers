@@ -1,6 +1,6 @@
 {
   "name": "@tickerdonkey/exchange-importer",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "> TODO: description",
   "homepage": "https://github.com/tickerdonkey/importers#readme",
   "license": "ISC",
@@ -17,7 +17,8 @@
     "url": "git+https://github.com/tickerdonkey/importers.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "test": "jest",
+    "build": "tsc -b"
   },
   "bugs": {
     "url": "https://github.com/tickerdonkey/importers/issues"
