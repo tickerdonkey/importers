@@ -1,7 +1,7 @@
 import { JSETickerImporter } from './JSETickerImporter'
 
 describe('ticker', () => {
-  it('should do stuff', async () => {
+  it('should get tickers by date', async () => {
     const sut = new JSETickerImporter()
     const tickers = await sut.import({
       startDate: '2019-08-05',
