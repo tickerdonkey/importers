@@ -2,6 +2,7 @@ import axios, { AxiosInstance } from 'axios'
 import csv from 'csvtojson'
 
 import { Ticker } from '../common/Ticker'
+import { ImportFilter } from '../common/ImportFilter'
 
 export class JSETickerImporter {
   private readonly client: AxiosInstance
@@ -14,9 +15,9 @@ export class JSETickerImporter {
     })
   }
 
-  public async import(): Promise<Ticker[]> {
+  public async import(filter: ImportFilter): Promise<Ticker[]> {
     try {
-      const response = await this.client.get('/all-stocks/2019-08-05/2019-08-05')
+      const response = await this.client.get(`/all-stocks/${filter.startDate}/${filter.endDate}`)
 
       const rawJsonData = await csv().fromString(response.data)
 
