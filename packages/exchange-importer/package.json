@@ -1,6 +1,6 @@
 {
   "name": "@tickerdonkey/exchange-importer",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Import exchange data for TickerDonkey",
   "homepage": "https://github.com/tickerdonkey/importers#readme",
   "license": "ISC",
