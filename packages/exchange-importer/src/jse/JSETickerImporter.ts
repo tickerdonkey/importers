@@ -17,7 +17,7 @@ export class JSETickerImporter {
 
   public async import(filter: ImportFilter): Promise<Ticker[]> {
     try {
-      const response = await this.client.get(`/all-stocks/${filter.startDate}/${filter.endDate}`)
+      const response = await this.client.get(`/${filter.instrument}/${filter.startDate}/${filter.endDate}`)
 
       const rawJsonData = await csv().fromString(response.data)
 
